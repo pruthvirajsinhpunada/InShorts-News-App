@@ -157,14 +157,6 @@ struct FeedView: View {
                 .task {
                     await viewModel.loadArticles(useCache: true)
                 }
-                .onChange(of: locationService.isLocationReady) { isReady in
-                    if isReady {
-                        Logger.debug("✅ Location ready! Refreshing with location data in background...", category: .general)
-                        Task {
-                            await viewModel.loadArticles(useCache: true)
-                        }
-                    }
-                }
                 .refreshable {
                     await viewModel.refreshArticles()
                 }
@@ -172,9 +164,6 @@ struct FeedView: View {
                     Task {
                         await viewModel.refreshArticles()
                     }
-                }
-                .onReceive(NotificationCenter.default.publisher(for: .locationDidUpdate)) { _ in
-                    Logger.debug("📍 Location changed - will use new location in next auto-refresh", category: .general)
                 }
                 .sheet(item: $selectedArticle) { article in
                     ArticleDetailView(article: article)
