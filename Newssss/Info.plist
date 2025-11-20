@@ -3,6 +3,12 @@
 <plist version="1.0">
 <dict>
     <!-- No API keys needed - app fetches from Firebase Storage -->
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
     <key>CFBundleDisplayName</key>
     <string>InShorts</string>
     <key>CFBundleName</key>
@@ -42,12 +48,8 @@
         <string>UIInterfaceOrientationLandscapeRight</string>
         <string>UIInterfaceOrientationPortraitUpsideDown</string>
     </array>
-    <key>UILaunchStoryboardName</key>
-    <string>LaunchScreen</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>InShorts wants to access your location to show you local news.</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>InShorts wants to access your location to show you local news.</string>
+    <key>UILaunchScreen</key>
+    <dict/>
     <key>NSCameraUsageDescription</key>
     <string>InShorts needs access to your camera to take profile photos.</string>
     <key>NSPhotoLibraryUsageDescription</key>

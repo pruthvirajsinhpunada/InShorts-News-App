@@ -173,6 +173,7 @@ struct MainTabView: View {
             }
             .tag(3)
         }
+        .environment(\.horizontalSizeClass, .compact)
         .tint(Color(hex: "#FF6B35"))
         .onAppear {
             setupTabBarAppearance()

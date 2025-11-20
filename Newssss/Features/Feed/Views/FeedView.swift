@@ -17,7 +17,6 @@ struct FeedView: View {
     @StateObject private var bookmarkService = BookmarkService.shared
     @State private var selectedArticle: Article?
     @StateObject private var toastManager = ToastManager.shared
-    @ObservedObject private var locationService = LocationService.shared
     @ObservedObject private var networkMonitor = NetworkMonitor.shared
 
     var body: some View {

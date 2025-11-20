@@ -12,7 +12,6 @@ struct SettingsView: View {
     
     var body: some View {
         Form {
-            locationSection
             preferencesSection
             notificationsSection
             updatesSection
@@ -21,23 +20,6 @@ struct SettingsView: View {
             aboutSection
         }
         .navigationTitle("Settings")
-    }
-    
-    private var locationSection: some View {
-        Section(header: Text("Location & Language")) {
-            NavigationLink(destination: LocationSettingsView()) {
-                HStack {
-                    Image(systemName: "location.fill")
-                        .foregroundColor(.blue)
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("News Location")
-                        Text(LocationService.shared.detectedCountry.displayName)
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
-                }
-            }
-        }
     }
     
     private var preferencesSection: some View {
