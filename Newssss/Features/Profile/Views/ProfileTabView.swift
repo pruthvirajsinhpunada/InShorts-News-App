@@ -47,13 +47,9 @@ struct ProfileTabView: View {
     
     private var signInView: some View {
         ZStack {
-            // Gradient background
-            LinearGradient(
-                colors: [Color(hex: "#FF6B35").opacity(0.05), Color.white],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            // Clean white background
+            Color.white
+                .ignoresSafeArea()
             
             VStack(spacing: 0) {
                 Spacer()
@@ -65,7 +61,7 @@ struct ProfileTabView: View {
                         .scaledToFit()
                         .frame(width: 120, height: 120)
                         .clipShape(RoundedRectangle(cornerRadius: 26))
-                        .shadow(color: Color(hex: "#FF6B35").opacity(0.3), radius: 20, x: 0, y: 10)
+                        .shadow(color: .black.opacity(0.1), radius: 15, x: 0, y: 8)
                     
                     Text("InShorts")
                         .font(.system(size: 36, weight: .bold, design: .rounded))
